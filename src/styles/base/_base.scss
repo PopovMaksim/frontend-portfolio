@@ -1,0 +1,29 @@
+:root {
+    font: {
+        family: 'Raleway';
+        size: 18px;
+    }
+    
+    --main-color: #2f304d;
+    --main-bg: #edeef0;
+    --second-bg: #ffffff;
+}
+
+body {
+    margin: 0;
+
+    color: var(--main-color);
+
+    background-color: var(--main-bg);
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 36px;
+    margin: 0 auto;
+}
