@@ -7,6 +7,7 @@
     --main-color: #2f304d;
     --main-bg: #edeef0;
     --second-bg: #ffffff;
+    --color-link: #004cae;
 }
 
 body {
@@ -26,4 +27,13 @@ a {
     max-width: 1260px;
     padding: 0 36px;
     margin: 0 auto;
+}
+
+.title {
+    margin: 0 0 0 3em;
+    padding: 1em 0;
+
+    font-family: 'Lobster';
+    font-size: 2rem;
+    font-weight: 700;
 }

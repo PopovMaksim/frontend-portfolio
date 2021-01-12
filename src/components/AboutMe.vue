@@ -1,6 +1,6 @@
 <template>
     <section class="about-me  container">
-        <h2 class="about-me__title">Обо мне</h2>
+        <h2 class="title">Обо мне</h2>
 
 		<div class="about-me__content">
 			<div class="about-me__image">
@@ -65,13 +65,14 @@
 					</li>
 					<li class="about-me__item">
 						<span class="about-me__item-title">Телефон: </span>
-						<a class="about-me__item-text" href="tel:+79611167509">+7 (961) 116 75 09</a>
+						<a class="about-me__item-text  about-me__link" href="tel:+79611167509">+7 (961) 116 75 09</a>
 					</li>
 					<li class="about-me__item">
 						<span class="about-me__item-title">E-mail: </span>
-						<a class="about-me__item-text" href="mailto:maksim-popov-1996@mail.ru">maksim-popov-1996@mail.ru</a>
+						<a class="about-me__item-text  about-me__link" href="mailto:maksim-popov-1996@mail.ru">maksim-popov-1996@mail.ru</a>
 					</li>
 				</ul>
+				<a class="about-me__resume  about-me__link" href="/documents/resume.pdf">Резюме</a>
 			</div>
 			<div class="about-me__general-info"></div>
 		</div>
@@ -86,16 +87,6 @@ export default {
 
 <style lang="scss">
 	.about-me {
-		// background: linear-gradient(#3e4067, #fff);
-
-		&__title {
-			margin: 0 0 0 3em;
-			padding: 1em 0;
-
-			font-family: 'Lobster';
-			font-size: 2rem;
-			font-weight: 700;
-		}
 
 		&__content {
 			display: grid;
@@ -125,6 +116,19 @@ export default {
 		}
 
 		&__item-title {
+			font-weight: 700;
+		}
+
+		&__link {
+			transition: .15s;
+
+			&:hover {
+				color: var(--color-link);
+			}
+		}
+
+		&__resume {
+			text-decoration: underline;
 			font-weight: 700;
 		}
 	}

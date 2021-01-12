@@ -1,7 +1,7 @@
 <template>
 	<section class="works  container">
 		<header class="works__header">
-			<h2 class="works__title">Портфолио</h2>
+			<h2 class="title">Портфолио</h2>
 			<div class="works__icons">
 				<div class="works__icon"  v-on:click="viewMode = 'works__container--tile' ">
 					<svg class="works__icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -180,15 +180,6 @@
 			align-items: center;
 		}
 
-		&__title {
-			margin: 0 0 0 3em;
-			padding: 1em 0;
-
-			font-family: 'Lobster';
-			font-size: 2rem;
-			font-weight: 700;
-		}
-
 		&__icons {
 			display: flex;
 			align-items: center;
@@ -344,7 +335,7 @@
 
 			padding: .25em .5em;
 
-			color: #004cae;
+			color: var(--color-link);
 
 			&:hover {
 				text-decoration: underline;

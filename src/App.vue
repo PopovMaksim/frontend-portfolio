@@ -34,5 +34,13 @@
     
     overflow-y: scroll;
     scroll-behavior: smooth;
+
+    &::after {
+      content: "";
+
+      display: block;
+      width: 100%;
+      height: 10%;
+    }
   }
 </style>
