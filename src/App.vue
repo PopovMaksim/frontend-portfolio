@@ -2,6 +2,7 @@
   <Aside></Aside>
   <main class="main">
     <router-view/>
+
   </main>
 
   

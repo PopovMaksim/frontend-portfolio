@@ -57,7 +57,7 @@
 
 <script>
 export default {
-
+	name: 'Experience',
 }
 </script>
 
@@ -71,7 +71,7 @@ export default {
 		&__item {
 			display: flex;
 
-			margin-bottom: 5%;
+			margin-bottom: 4%;
 		}
 
 		&__period {
