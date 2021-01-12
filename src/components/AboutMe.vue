@@ -1,6 +1,6 @@
 <template>
     <section class="about-me  container">
-        <h2 class="title">Обо мне</h2>
+        <h2 class="subtitle">Персональная информация</h2>
 
 		<div class="about-me__content">
 			<div class="about-me__image">
@@ -53,7 +53,6 @@
 				</svg>
 			</div>
 			<div class="about-me__personal-info">
-				<h3 class="about-me__subtitle">Персональная информация</h3>
 				<ul class="about-me__list">
 					<li class="about-me__item">
 						<span class="about-me__item-title">Имя: </span>

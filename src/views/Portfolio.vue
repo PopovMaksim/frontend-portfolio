@@ -1,5 +1,6 @@
 <template>
-  <Works></Works>
+  <h1 class="title">Портфолио</h1>
+  <Works />
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
 	<section class="experience  container">
-		<h2 class="title">Опыт</h2>
+		<h2 class="subtitle">Опыт</h2>
 
 		<div class="experience__category">
 			<h3 class="experience__subtitle">Образование</h3>

@@ -1,9 +1,13 @@
 <template>
 	<section class="works  container">
-		<header class="works__header">
-			<h2 class="title">Портфолио</h2>
+		<div class="works__header" :class="{works__header_notitle: !sub}">
+			<h2 class="subtitle" v-if="sub">Портфолио</h2>
 			<div class="works__icons">
-				<div class="works__icon"  v-on:click="viewMode = 'works__container--tile' ">
+				<div
+					class="works__icon"
+					:class="{ works__icon_active: viewMode === 'works__container--tile' }"
+					v-on:click="viewMode = 'works__container--tile' "
+				>
 					<svg class="works__icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
 						<path class="st0" d="M13,14H1c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1h12c0.6,0,1,0.4,1,1v12C14,13.6,13.6,14,13,14z"/>
@@ -12,7 +16,11 @@
 						<path class="st0" d="M13,16H1c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h12c0.6,0,1-0.4,1-1V17C14,16.4,13.6,16,13,16z"/>
 					</svg>
 				</div>
-				<div class="works__icon"  v-on:click="viewMode = 'works__container--list' ">
+				<div
+					class="works__icon"
+					:class="{ works__icon_active: viewMode === 'works__container--list' }"
+					v-on:click="viewMode = 'works__container--list' "
+				>
 					<svg class="works__icon-svg" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
 						<path class="st0" d="M11,8h18c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H11c-0.6,0-1,0.4-1,1v6C10,7.6,10.4,8,11,8z"/>
@@ -25,7 +33,7 @@
 				</div>
 			</div>
 			
-		</header>
+		</div>
 		<div class="works__container" v-bind:class="viewMode">
 			<div class="works__item" v-for="item of items" v-bind:key="item.id">
 				<div class="works__image">
@@ -47,70 +55,6 @@
 					</div>
 				</div>
 			</div>
-
-
-			<!-- <div class="works__item">
-				<div class="works__image">
-					<img src="@/assets/work-minima.jpg" alt="" class="works__image-img">
-				</div>
-				<div class="works__info">
-					<div class="works__item-main">
-						<h4 class="works__item-title">Minima</h4>
-						<p class="works__text">Тестовая верстка</p>
-					</div>
-					<div class="works__item-footer">
-						<div class="works__btns">
-							<a href="" class="works__btn">Просмотр</a>
-							<a href="" class="works__btn">GitHub</a>
-						</div>
-						<div class="works__technology-stack">
-							<span class="works__technology-stack-item">HTML</span>
-							<span class="works__technology-stack-item">CSS</span>
-							<span class="works__technology-stack-item">jQuery</span>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			<!-- <div class="works__item">
-				<div class="works__image">
-					<img src="@/assets/work-restaurante.jpg" alt="" class="works__image-img">
-				</div>
-				<div class="works__info">
-					<h4 class="works__item-titke">LeRestaurante</h4>
-					<p class="works__item-text">Тестовая верстка</p>
-					<div class="works__item-technology-stack">
-						<span>Pug</span>
-						<span>SASS</span>
-						<span>JavaScript</span>
-						<span>Gulp</span>
-					</div>
-				</div>
-			</div>
-			<div class="works__item">
-				<div class="works__image">
-					<img src="@/assets/work-adele.jpg" alt="" class="works__image-img">
-				</div>
-				<div class="works__info">
-					<h4 class="works__item-titke">Adele</h4>
-					<p class="works__item-text">Тестовая верстка</p>
-					<div class="works__item-technology-stack">
-						<span>HTML</span>
-						<span>CSS</span>
-					</div>
-				</div>
-			</div>
-			<div class="works__item">
-				<div class="works__image">
-					<img src="@/assets/work-minima.jpg" alt="" class="works__image-img">
-				</div>
-				<div class="works__info">
-					<h4 class="works__item-titke"></h4>
-					<p class="works__item-text"></p>
-					<div class="works__item-technology-stack">
-							
-					</div>
-				</div>
-			</div> -->
 		</div>
 	</section>
 </template>
@@ -118,6 +62,9 @@
 
 	export default {
 		name: 'Works',
+		props: {
+			sub: Boolean,
+		},
 		data() {
 			return {
 				viewMode: 'works__container--tile',
@@ -178,6 +125,12 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			&_notitle {
+				justify-content: flex-end;
+
+				padding: 0 0 2em;
+			}
 		}
 
 		&__icons {
@@ -214,7 +167,7 @@
 
 			overflow: hidden;
 
-			border-radius: 6px;
+			border-radius: 5px;
 			box-shadow: 0 0 10px var(--main-color);
 
 			transition: .5s;
@@ -317,7 +270,7 @@
 				left: 0;
 
 				width: calc(100% - 4em);
-				height: calc(100% - 4em);
+				height: calc(100% - 2.5em);
 
 				opacity: 0;
 			}
@@ -357,5 +310,9 @@
 
 	.st0 {
 		fill:#B3B3B3;
+
+		.works__icon_active & {
+			fill: var(--main-color)
+		}
 	}
 </style>

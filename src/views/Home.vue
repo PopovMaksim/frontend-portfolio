@@ -1,11 +1,11 @@
 <template>
-  <MainScreen></MainScreen>
+  <MainScreen />
 
-  <AboutMe></AboutMe>
+  <AboutMe />
 
-  <Works></Works>
+  <Works sub/>
 
-  <WriteLetter></WriteLetter>
+  <WriteLetter page="home" />
 </template>
 
 <script>

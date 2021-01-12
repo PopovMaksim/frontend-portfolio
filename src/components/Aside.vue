@@ -120,10 +120,6 @@ export default {
 			cursor: pointer;
 			transition: 0.15s;
 
-			// &:hover {
-			// 	transform: scale(1.2)
-			// }
-
 			&--arrow {
 				width: 100%;
 				padding: 0.5em 0;

@@ -1,6 +1,6 @@
 <template>
-	<section class="letter  container">
-		<h2 class="letter__title">Написать письмо</h2>
+	<section class="letter" :class="{container: page === 'home'}">
+		<h2 class="subtitle" v-if="page === 'home'" >Написать письмо</h2>
 		<form class="letter__form" action="mailto:maksim-popov-1996@mail.ru" method="get" target="_blank">
 			<input class="letter__input" type="text" name="subject" placeholder="Введите тему">
 			<textarea class="letter__input  letter__input--body" name="body" rows="7" placeholder="Написать..."></textarea>
@@ -12,23 +12,15 @@
 <script>
 
 export default {
-    name: 'WriteLetter'
-    
+    name: 'WriteLetter',
+    props: {
+		page: String,
+	}
 }
 </script>
 
 <style lang="scss">
 	.letter {
-
-		&__title {
-			margin: 0 0 0 3em;
-			padding: 1em 0;
-
-			font-family: 'Lobster';
-			font-size: 2rem;
-			font-weight: 700;
-		}
-
 		&__form	{
 			display: flex;
 			flex-direction: column;

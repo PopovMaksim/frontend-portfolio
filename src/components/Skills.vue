@@ -1,6 +1,6 @@
 <template>
   <section class="skills  container">
-    <h2 class="title">Навыки</h2>
+    <h2 class="subtitle">Навыки</h2>
 		<div class="skills__container">
 			<div class="skills__item  skills__item--html">
 				<svg class="skills__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.8 456.8" xml:space="preserve">
@@ -37,6 +37,11 @@
 			<div class="skills__item  skills__item--git">
 				<svg class="skills__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480" xml:space="preserve">
 					<path d="M422,221L259,58c-5-5-12-8-19-8l0,0c-7,0-14,3-19,8l-35,35l41,41c4-2,8-3,13-3c17,0,30,13,30,30c0,5-1,9-3,13l40,40c4-2,8-3,13-3c17,0,30,13,30,30s-13,30-30,30s-30-13-30-30c0-5,1-9,3-13l-40-40c-1,0-2,1-3,1v104c12,4,20,15,20,28c0,17-13,30-30,30s-30-13-30-30c0-13,8-24,20-28V188c-12-4-20-15-20-28c0-5,1-9,3-13l-41-41L58,221c-5,5-8,12-8,19s3,14,8,19l163,163l0,0c5,5,12,8,19,8s14-3,19-8l163-163c5-5,8-12,8-19C430,233,427,226,422,221z"/>
+				</svg>
+			</div>
+			<div class="skills__item  skills__item--bem">
+				<svg class="skills__svg" viewBox="0 0 256 212" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+						<path d="M0 32.692h59.85v17.603H0V32.692zM0 0h59.85v17.603H0V0zm107.38 65.132H0v17.603h103.356c11.316 0 37.72.251 47.528 16.094v-9.807c-4.778-15.592-18.86-23.89-43.505-23.89zm.25 32.691H0v17.603h103.356c25.147 0 40.99 1.006 47.528 4.527v-7.796c-5.03-12.322-26.153-14.334-43.253-14.334zm-.25 82.986H0v-17.603h103.356c11.316 0 37.72-.251 47.528-16.094v9.807c-4.778 15.592-18.86 23.89-43.505 23.89zm.25-32.691H0v-17.603h103.356c25.147 0 40.99-1.006 47.528-4.527v7.796c-5.03 12.322-26.153 14.334-43.253 14.334zm69.407 63.12H256v-10.814h-76.7c-6.79 0-22.883-.251-28.667-9.556v6.036c2.766 9.304 11.316 14.334 26.404 14.334zm-.251-19.867h78.963v-10.813H179.3c-15.34 0-24.896-.503-28.668-2.766v4.778c3.017 7.544 15.842 8.801 26.153 8.801z" />
 				</svg>
 			</div>
 		</div>
@@ -104,6 +109,9 @@ export default {
 			}
 			.skills__item--git:hover & {
 				fill: #e94e31;
+			}
+			.skills__item--bem:hover & {
+				fill: #010101;
 			}
 		}
 	}

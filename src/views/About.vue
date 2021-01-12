@@ -1,4 +1,6 @@
 <template>
+  <h1 class="title">Обо мне</h1>
+  
   <AboutMe></AboutMe>
 
   <Experience></Experience>
