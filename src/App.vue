@@ -22,12 +22,18 @@
 <style lang="scss">
   #app {
     display: grid;
-    grid-template-columns: 3em auto;
 
     overflow: hidden;
     height: 100vh;
 
     transition: .3s;
+
+    @media (max-width: 530px) {
+      grid-template-columns: auto;
+    }
+    @media (min-width: 530px) {
+      grid-template-columns: 3em auto;
+    }
   }
 
   .main {

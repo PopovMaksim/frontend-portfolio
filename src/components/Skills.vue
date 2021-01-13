@@ -66,11 +66,22 @@ export default {
 		&__item {
 			position: relative;
 
-			width: 14%;
-			padding-top: 14%;
 			margin: 5%;
 
 			transition: .3s;
+
+			@media (max-width: 360px) {
+				width: 20%;
+				padding-top: 20%;
+			}
+			@media (min-width: 360px) and (max-width: 650px) {
+				width: 17%;
+				padding-top: 17%;
+			}
+			@media (min-width: 650px) {
+				width: 14%;
+				padding-top: 14%;
+			}
 
 			&:hover {
 				transform: scale(1.1);

@@ -41,6 +41,7 @@ export default {
 			font-family: 'Lobster';
 			font-size: calc( 1rem + 5vw );
 			font-weight: 900;
+			text-align: center;
 		}
 	}
 </style>

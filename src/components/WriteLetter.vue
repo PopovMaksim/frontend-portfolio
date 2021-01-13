@@ -48,7 +48,7 @@ export default {
 			font-size: 1rem;
 
 			&--body {
-				resize: none;
+				resize: vertical;
 			}
 
 			&--submit {

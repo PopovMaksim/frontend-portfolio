@@ -173,9 +173,20 @@
 			transition: .5s;
 
 			.works__container--tile & {
-				width: 32%;
-				margin-bottom: 2%;
 
+				@media (max-width: 750px) {
+					width: 100%;
+					margin-bottom: 4%;
+				}				
+				@media (min-width: 750px) and (max-width: 1000px) {
+					width: 48.5%;
+					margin-bottom: 3%;
+				}				
+				@media (min-width: 1000px) {
+					width: 32%;
+					margin-bottom: 2%;
+				}
+				
 				&:hover {
 					& .works__info {
 						opacity: 1;
@@ -193,6 +204,10 @@
 
 				width: 100%;
 				margin-bottom: 4%;
+
+				@media (max-width: 530px) {
+					flex-direction: column;
+				}
 			}
 		}
 
@@ -218,23 +233,46 @@
 
 			.works__container--tile & {
 				width: 100%;
-				padding-top: 110%;
+
+				@media (max-width: 750px) {
+					padding-top: 80%;
+				}
+				@media (min-width: 750px) {
+					padding-top: 110%;
+				}
 			}
 
 			.works__container--list & {
-				width: 40%;
-				padding-top: 25%;
 
-				&::after {
-					content: "";
-					position: absolute;
-					top: 0;
-					right: 0;
-
-					border: 2em solid transparent;
-					border-top: 20em solid var(--main-bg);
-					border-right: 0 solid var(--main-bg);
+				@media (max-width: 530px) {
+					width: 100%;
+					padding-top: 68%;
 				}
+				@media (min-width: 530px) {
+					width: 40%;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+
+						border: 2em solid transparent;
+						border-top: 20em solid var(--main-bg);
+						border-right: 0 solid var(--main-bg);
+					}
+				}
+				@media (min-width: 530px) and (max-width: 750px) {
+					padding-top: 45%;
+				}
+				@media (min-width: 750px) and (max-width: 1000px) {
+					padding-top: 35%;
+				}
+				@media (min-width: 1000px) {
+					padding-top: 25%;
+				}
+
+				
 			}
 		}
 
@@ -264,6 +302,10 @@
 
 			transition: .3s;
 
+			@media (max-width: 750px) {
+				margin: 1em 0.5em 0.5em;
+			}
+
 			.works__container--tile & {
 				position: absolute;
 				top: 0;
@@ -274,13 +316,16 @@
 
 				opacity: 0;
 			}
-			.works__container--list & {
-				// 
-			}
 		}
 
 		&__item-title {
 			margin: 0;
+		}
+
+		&__text {
+			@media (max-width: 750px) {
+				margin: 0.5em 0;
+			}
 		}
 
 		&__btn {

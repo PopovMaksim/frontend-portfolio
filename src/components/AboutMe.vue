@@ -89,12 +89,31 @@ export default {
 
 		&__content {
 			display: grid;
-			grid-template-columns: minmax(200px, 1fr) 4fr;
 			grid-gap: 2em;
+
+			@media (max-width: 650px) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 200px auto;
+				justify-items: center;
+			}
+			@media (min-width: 650px) {
+				grid-template-columns: minmax(200px, 1fr) 4fr;
+			}
+		}
+
+		&__image {
+			@media (max-width: 650px) {
+				width: 200px;
+			}
+		}
+
+		&__image-svg {
+			width: 100%;
 		}
 
 		&__personal-info {
 			max-width: 350px;
+			width: 100%;
 		}
 
 		&__subtitle {
@@ -112,10 +131,20 @@ export default {
 			justify-content: space-between;
 
 			line-height: 1.5;
+
+			@media (max-width: 360px) {
+				flex-direction: column;
+
+				margin-bottom: 0.75em;
+			}
 		}
 
 		&__item-title {
 			font-weight: 700;
+
+			@media (max-width: 360px) {
+				text-align: center;
+			}
 		}
 
 		&__link {

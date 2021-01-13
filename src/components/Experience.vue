@@ -66,25 +66,39 @@ export default {
 
 		&__subtitle {
 			margin: 1em 2em 2em;
+
+			font-size: 1.25rem;
 		}
 
 		&__item {
 			display: flex;
 
 			margin-bottom: 4%;
+
+			@media (max-width: 500px) {
+				flex-direction: column;
+			}
 		}
 
 		&__period {
 			display: flex;
-			flex-direction: column;
 			align-items: center;
 
-			margin-right: 5%;
+			margin: 0 0 5% 5%;
+
+			@media (min-width: 500px) {
+				flex-direction: column;
+
+			}
 		}
 
 		&__date {
 			font-size: 1.75rem;
 			font-weight: 700;
+
+			@media (max-width: 500px) {
+				margin-right: 0.25em;
+			}
 
 			&--small {
 				font-size: 1rem;
@@ -94,6 +108,10 @@ export default {
 		&__qualification {
 			font-size: 0.9rem;
 			font-style: italic;
+
+			@media (max-width: 500px) {
+				margin-left: 0.5em;
+			}
 		}
 
 		&__name-organization {
