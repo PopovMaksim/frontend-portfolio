@@ -46,8 +46,8 @@
 					</div>
 					<div class="works__item-footer">
 						<div class="works__btns">
-							<a :href="item.links.preview" class="works__btn">Просмотр</a>
-							<a :href="item.links.git" class="works__btn">GitHub</a>
+							<a :href="item.links.preview" class="works__btn" target="_blank">Просмотр</a>
+							<a :href="item.links.git" class="works__btn" target="_blank">GitHub</a>
 						</div>
 						<div class="works__technology-stack">
 							<div class="works__technology-stack-item" v-for="tec of item.technologyStack" :key="tec.id">{{ tec }}</div>
@@ -70,9 +70,88 @@
 				viewMode: 'works__container--tile',
 				items: [
 					{
+						title: 'Портфолио',
+						content: 'Проект на Vue CLI',
+						image: require('@/assets/works/portfolio.jpg'),
+						links: {
+							preview: 'https://popovmaksim.github.io',
+							git: 'https://github.com/PopovMaksim/frontend-portfolio', 
+						},
+						technologyStack: [
+							'Vue',
+							'Vue Router'
+						],
+					},
+					{
+						title: 'Кейс Клиника 2.0',
+						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
+						image: require('@/assets/works/medicinskij.jpg'),
+						links: {
+							preview: 'https://vladit.ru/portfolio/kejs-medicinskij/',
+						},
+						technologyStack: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+						],
+					},
+					{
+						title: 'Кейс умного дома',
+						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
+						image: require('@/assets/works/smart-house.jpg'),
+						links: {
+							preview: 'https://vladit.ru/portfolio/kejs-smart-house/',
+						},
+						technologyStack: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+						],
+					},
+					{
+						title: 'Кейс ипотечной платформы',
+						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
+						image: require('@/assets/works/ipoteka-global.jpg'),
+						links: {
+							preview: 'https://vladit.ru/portfolio/kejs-ipoteka-global/',
+						},
+						technologyStack: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+						],
+					},
+					{
+						title: 'Кейс "Мустанг"',
+						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
+						image: require('@/assets/works/mustang.jpg'),
+						links: {
+							preview: 'https://vladit.ru/portfolio/kejs-mustang/',
+						},
+						technologyStack: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+						],
+					},
+					{
+						title: 'Bicycle',
+						content: 'Кроссбраузерная адаптивная верстка главной страницы с помощью Grid Layout',
+						image: require('@/assets/works/bicycle.jpg'),
+						links: {
+							preview: 'https://popovmaksim.github.io/Bicycle',
+							git: 'https://github.com/PopovMaksim/bicycle', 
+						},
+						technologyStack: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+						],
+					},
+					{
 						title: 'Minima',
-						content: 'Тестовая верстка',
-						image: require('@/assets/work-minima.jpg'),
+						content: 'Верстка макета с помощью flexbox',
+						image: require('@/assets/works/minima.jpg'),
 						links: {
 							preview: 'https://popovmaksim.github.io/Minima',
 							git: 'https://github.com/PopovMaksim/Minima', 
@@ -85,8 +164,8 @@
 					},
 					{
 						title: 'Adele',
-						content: 'Тестовая верстка',
-						image: require('@/assets/work-adele.jpg'),
+						content: 'Верстка макета с помощью Grid Layout, слайдер выполнен на чистом css',
+						image: require('@/assets/works/adele.jpg'),
 						links: {
 							preview: 'https://popovmaksim.github.io/Adele',
 							git: 'https://github.com/PopovMaksim/Adele', 
@@ -98,8 +177,8 @@
 					},
 					{
 						title: 'LeRestaurante',
-						content: 'Тестовая верстка',
-						image: require('@/assets/work-restaurante.jpg'),
+						content: 'Верстка макета с помощью flexbox',
+						image: require('@/assets/works/restaurante.jpg'),
 						links: {
 							preview: 'https://popovmaksim.github.io/LeRestaurant/',
 							git: 'https://github.com/PopovMaksim/LeRestaurant', 
@@ -205,7 +284,7 @@
 				width: 100%;
 				margin-bottom: 4%;
 
-				@media (max-width: 530px) {
+				@media (max-width: 650px) {
 					flex-direction: column;
 				}
 			}
@@ -244,11 +323,11 @@
 
 			.works__container--list & {
 
-				@media (max-width: 530px) {
+				@media (max-width: 650px) {
 					width: 100%;
 					padding-top: 68%;
 				}
-				@media (min-width: 530px) {
+				@media (min-width: 650px) {
 					width: 40%;
 
 					&::after {
@@ -262,7 +341,7 @@
 						border-right: 0 solid var(--main-bg);
 					}
 				}
-				@media (min-width: 530px) and (max-width: 750px) {
+				@media (min-width: 650px) and (max-width: 750px) {
 					padding-top: 45%;
 				}
 				@media (min-width: 750px) and (max-width: 1000px) {
