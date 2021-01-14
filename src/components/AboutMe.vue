@@ -141,10 +141,6 @@ export default {
 
 		&__item-title {
 			font-weight: 700;
-
-			@media (max-width: 360px) {
-				text-align: center;
-			}
 		}
 
 		&__link {

@@ -84,7 +84,7 @@ export default {
 			display: flex;
 			align-items: center;
 
-			margin: 0 0 5% 5%;
+			margin: 0 5% 5%;
 
 			@media (min-width: 500px) {
 				flex-direction: column;

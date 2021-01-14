@@ -37,7 +37,11 @@
 		<div class="works__container" v-bind:class="viewMode">
 			<div class="works__item" v-for="item of items" v-bind:key="item.id">
 				<div class="works__image">
-					<img alt="" class="works__image-img" :src="item.image">
+					<!-- <img alt="" class="works__image-img" > -->
+					<picture>
+						<source :srcset="item.imageWebp" type="image/webp">
+						<img class="works__image-img" :src="item.image" :alt="item.title">
+					</picture>
 				</div>
 				<div class="works__info">
 					<div class="works__item-main">
@@ -47,7 +51,12 @@
 					<div class="works__item-footer">
 						<div class="works__btns">
 							<a :href="item.links.preview" class="works__btn" target="_blank">Просмотр</a>
-							<a :href="item.links.git" class="works__btn" target="_blank">GitHub</a>
+							<a
+								v-if="item.links.git"
+								:href="item.links.git"
+								class="works__btn"
+								target="_blank"
+							>GitHub</a>
 						</div>
 						<div class="works__technology-stack">
 							<div class="works__technology-stack-item" v-for="tec of item.technologyStack" :key="tec.id">{{ tec }}</div>
@@ -73,6 +82,7 @@
 						title: 'Портфолио',
 						content: 'Проект на Vue CLI',
 						image: require('@/assets/works/portfolio.jpg'),
+						imageWebp: require('@/assets/works/portfolio.webp'),
 						links: {
 							preview: 'https://popovmaksim.github.io',
 							git: 'https://github.com/PopovMaksim/frontend-portfolio', 
@@ -86,6 +96,7 @@
 						title: 'Кейс Клиника 2.0',
 						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
 						image: require('@/assets/works/medicinskij.jpg'),
+						imageWebp: require('@/assets/works/medicinskij.webp'),
 						links: {
 							preview: 'https://vladit.ru/portfolio/kejs-medicinskij/',
 						},
@@ -99,6 +110,7 @@
 						title: 'Кейс умного дома',
 						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
 						image: require('@/assets/works/smart-house.jpg'),
+						imageWebp: require('@/assets/works/smart-house.webp'),
 						links: {
 							preview: 'https://vladit.ru/portfolio/kejs-smart-house/',
 						},
@@ -112,6 +124,7 @@
 						title: 'Кейс ипотечной платформы',
 						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
 						image: require('@/assets/works/ipoteka-global.jpg'),
+						imageWebp: require('@/assets/works/ipoteka-global.webp'),
 						links: {
 							preview: 'https://vladit.ru/portfolio/kejs-ipoteka-global/',
 						},
@@ -125,6 +138,7 @@
 						title: 'Кейс "Мустанг"',
 						content: 'Адаптивная и кроссбраузерная верстка кейса, анимирование всех элементов, реализация слайдера через API "Swiper"',
 						image: require('@/assets/works/mustang.jpg'),
+						imageWebp: require('@/assets/works/mustang.webp'),
 						links: {
 							preview: 'https://vladit.ru/portfolio/kejs-mustang/',
 						},
@@ -138,6 +152,7 @@
 						title: 'Bicycle',
 						content: 'Кроссбраузерная адаптивная верстка главной страницы с помощью Grid Layout',
 						image: require('@/assets/works/bicycle.jpg'),
+						imageWebp: require('@/assets/works/bicycle.webp'),
 						links: {
 							preview: 'https://popovmaksim.github.io/Bicycle',
 							git: 'https://github.com/PopovMaksim/bicycle', 
@@ -152,6 +167,7 @@
 						title: 'Minima',
 						content: 'Верстка макета с помощью flexbox',
 						image: require('@/assets/works/minima.jpg'),
+						imageWebp: require('@/assets/works/minima.webp'),
 						links: {
 							preview: 'https://popovmaksim.github.io/Minima',
 							git: 'https://github.com/PopovMaksim/Minima', 
@@ -166,6 +182,7 @@
 						title: 'Adele',
 						content: 'Верстка макета с помощью Grid Layout, слайдер выполнен на чистом css',
 						image: require('@/assets/works/adele.jpg'),
+						imageWebp: require('@/assets/works/adele.webp'),
 						links: {
 							preview: 'https://popovmaksim.github.io/Adele',
 							git: 'https://github.com/PopovMaksim/Adele', 
@@ -179,6 +196,7 @@
 						title: 'LeRestaurante',
 						content: 'Верстка макета с помощью flexbox',
 						image: require('@/assets/works/restaurante.jpg'),
+						imageWebp: require('@/assets/works/restaurante.webp'),
 						links: {
 							preview: 'https://popovmaksim.github.io/LeRestaurant/',
 							git: 'https://github.com/PopovMaksim/LeRestaurant', 
