@@ -10,7 +10,7 @@
         </p>
         <p class="contacts__item">
             <span class="contacts__item-name">E-mail: </span>
-            <a class="contacts__item-link" href="mailto:maksim-popov-1996@mail.ru" target="_blank">maksim-popov-1996@mail.ru</a>
+            <a href="#" class="contacts__item-link  contacts__copy-clipboard" @click="copyToClipboard"  :data-msg="msg">maksim-popov-1996@mail.ru</a>
         </p>
         <div class="contacts__icons">
             <a href="https://github.com/PopovMaksim" target="_blank" class="contacts__icon  contacts__icon--git">
@@ -45,6 +45,28 @@ export default {
   name: 'Contacts',
   components: {
     WriteLetter,
+  },
+  data() {
+		return {
+			msg: '',
+		}
+	},
+  methods: {
+    copyToClipboard: function({target}) {
+      const copyText = target.textContent.trim();
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(copyText)
+          .then(() => {
+            this.msg = 'Email адрес скопирован в буфер обмена'
+          })
+          .catch(err => {
+            this.msg = `Something went wrong ${err}`;
+          });
+      } else {
+        document.execCommand("copy");
+      }
+    }
   }
 }
 </script>
@@ -81,6 +103,7 @@ export default {
     }
 
     &__item-link {
+      cursor: pointer;
       transition: .3s;
 
       &:hover {
@@ -125,6 +148,31 @@ export default {
       }
       .contacts__icon--vk:hover & {
         fill: #4e7db2;
+      }
+    }
+
+    &__copy-clipboard {
+      position: relative;
+
+      &::after {
+        content: attr(data-msg);
+
+        position: absolute;
+        top: 125%;
+        left: 0px;
+        z-index: 50;
+
+        display: none;
+
+        padding: 0.5em 0.75em;
+
+        border-radius: 5px;
+        box-shadow: 0 0 7px var(--main-color);
+        background-color: var(--second-bg);
+        color: initial;
+      }
+      &:focus::after {
+        display: block;
       }
     }
   }
