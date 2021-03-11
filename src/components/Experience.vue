@@ -40,10 +40,25 @@
 				<div class="experience__period">
 					<div class="experience__date">2020</div>
 					<div class="experience__date">-</div>
-					<div class="experience__date  experience__date--small">наст.вр</div>
+					<div class="experience__date">2021</div>
 				</div>
 				<div class="experience__content">
 					<h4 class="experience__name-organization">Vlad IT</h4>
+					<h5 class="experience__position">Front-end разработчик</h5>
+					<ul class="experience__info">
+						<li>Адаптивная и кроссбраузерная верстка</li>
+						<li>Создание визуальных эффектов</li>
+					</ul>
+				</div>
+			</div>
+			<div class="experience__item">
+				<div class="experience__period">
+					<div class="experience__date">2021</div>
+					<div class="experience__date">-</div>
+					<div class="experience__date  experience__date--small">наст.вр</div>
+				</div>
+				<div class="experience__content">
+					<h4 class="experience__name-organization">Involta</h4>
 					<h5 class="experience__position">Front-end разработчик</h5>
 					<ul class="experience__info">
 						<li>Адаптивная и кроссбраузерная верстка</li>

@@ -71,7 +71,7 @@
 						<a class="about-me__item-text  about-me__link" href="mailto:maksim-popov-1996@mail.ru">maksim-popov-1996@mail.ru</a>
 					</li>
 				</ul>
-				<a class="about-me__resume  about-me__link" href="/documents/resume.pdf">Резюме</a>
+				<a class="about-me__resume  about-me__link" href="/documents/resume.pdf" target="_blank">Резюме</a>
 			</div>
 			<div class="about-me__general-info"></div>
 		</div>
